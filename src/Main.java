@@ -1,17 +1,47 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+// class PoliticalParty
+//	main ()
+//		STRING politicalParty
+//		output “What is your political party?”
+//		if politicalParty = “Democrat” then
+//			output “You get a Democratic Donkey.”
+//		elseif politicalParty = "Republican” then
+//			output "You get a Republican Elephant.”
+//		elseif politicalParty = “Independent” then
+//output “You get an Independent Man.”
+//				else
+//					out “Your party does not have a symbol or mascot.”
+//				endIf
+//	return
+//end class
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        String politicalParty = "";
+
+        System.out.printf("Please enter D if you are a Democrat, R if you are a Republican or a I if you are an Independent.");
+
+        politicalParty = in.nextLine();
+
+        if(politicalParty.equals("D"))
+        {
+            System.out.printf("You are a Democrat and your party's mascot is a donkey!");
+        }
+        else if (politicalParty.equals("R"))
+        {
+            System.out.printf("You are a Republican and your party's mascot is an elephant!");
+        }
+        else if (politicalParty.equals("I"))
+        {
+            System.out.printf("You are an Independent and your party's mascot is a man!");
+        }
+        else
+        {
+            System.out.printf("Your political party is not recognized and has no know mascot.");
         }
     }
 }
